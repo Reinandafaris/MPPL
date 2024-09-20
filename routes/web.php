@@ -36,11 +36,15 @@ Route::get('/akun/hapus/{kode}', [AkunController::class, 'destroy'])->name('akun
 
 Route::resource('/kaskeluar', KasKeluarController::class);
 
+Route::get('/kaskeluar/edit/{id}', [KasKeluarController::class, 'edit'])->name('kaskeluar.edit');
+
 Route::get('/kaskeluar/hapus/{id}', [KasKeluarController::class, 'destroy'])->name('kaskeluar.destroy');
 
 Route::resource('/bukubesar', BukubesarController::class);
 
 Route::resource('/kasmasuk', KasMasukController::class);
+
+Route::get('/kasmasuk/edit/{id}', [KasMasukController::class, 'edit'])->name('kasmasuk.edit');
 
 Route::get('/kasmasuk/hapus/{id}', [KasMasukController::class, 'destroy'])->name('kasmasuk.destroy');
 

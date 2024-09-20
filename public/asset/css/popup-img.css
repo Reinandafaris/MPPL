@@ -1,0 +1,45 @@
+/* Styling dasar untuk gambar */
+.gambar {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Ketika gambar di hover, akan sedikit diperbesar */
+.gambar:hover {
+    transform: scale(1.1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Styling untuk background popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+/* Gambar di dalam popup */
+.popup img {
+    max-width: 100%; /* Lebar maksimum gambar 100% dari layar */
+    max-height: 100vh; /* Tinggi maksimum gambar sama dengan tinggi viewport */
+    height: auto;
+    width: auto; /* Pastikan gambar tetap responsif */
+}
+
+/* Tombol close di pojok kanan atas */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

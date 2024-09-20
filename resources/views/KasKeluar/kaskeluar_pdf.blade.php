@@ -26,29 +26,31 @@
         <thead>
             <tr align="center">
                 <th width="5%">No</th>
-                <th width="20%">No Transaksi</th>
-                <th width="20%">Tanggal</th>
-                <th width="40%">Memo</th>
+                <th width="20%">No Nota</th>
+                <th width="20%">Tgl Transaksi</th>
+                <th width="30%">Memo</th>
+                <th width="30%">Tempat Beli</th>
                 <th width="15%">Jumlah</th>
             </tr>
         </thead>
         <tbody>
             @php $i=1 @endphp
             @foreach ($kaskeluar as $kk)
-                <tr>
-                    <td>{{ $i++ }}</td>
-                    <td>{{ $kk->nokk }}</td>
-                    <td>{{ $kk->tglkk }}</td>
-                    <td>{{ $kk->memokk }}</td>
-                    <td>{{ $kk->jmkk }}</td>
-                </tr>
+            <tr>
+                <td>{{ $i++ }}</td>
+                <td>{{ $kk->nokk }}</td>
+                <td>{{ $kk->tglkk }}</td>
+                <td>{{ $kk->memokk }}</td>
+                <td>{{ $kk->tmptbeli }}</td>
+                <td>{{ $kk->jmkk }}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
     <div align="right">
         <h6>Tanda Tangan</h6><br><br>
         @if (Auth::check())
-            <h6>{{ Auth::user()->name }}</h6>
+        <h6>{{ Auth::user()->name }}</h6>
         @endif
     </div>
 </body>
